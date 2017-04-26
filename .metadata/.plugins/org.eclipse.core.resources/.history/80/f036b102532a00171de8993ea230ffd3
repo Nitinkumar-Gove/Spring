@@ -1,0 +1,7 @@
+package com.reservationsystem.api.flight;
+
+import org.springframework.data.repository.CrudRepository;
+
+public interface FlightDataHandler extends CrudRepository<Flight, String> {
+
+}

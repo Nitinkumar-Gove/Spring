@@ -1,0 +1,47 @@
+package com.reservationsystem.api.flight;
+
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Date;
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class FlightService {
+	
+	// raw data store
+	List<Flight> flights = new ArrayList<>(Arrays.asList(new Flight("1",2000,"Pune","Mumbai",new Date(),new Date(),50,"Daily flight"),
+			new Flight("2",2000,"Pune","Bangalore",new Date(),new Date(),50,"Daily flight"),
+			new Flight("3",2000,"Pune","Goa",new Date(),new Date(),50,"Daily flight")));	
+	
+	/**
+	 * function to get all the flights available
+	 * @return list of flights
+	 */	
+	public List<Flight> getAllFlights(){ 
+	return flights;
+	}
+	
+	/**
+	 * function to get the flight with flight ID provided
+	 * @param flightID
+	 * @return flight
+	 */
+	public Flight getFlight(String flightID){
+		return flights.stream().filter(f -> f.getNumber().equals(flightID)).findFirst().get();
+	}
+	
+	/**
+	 * function to add new flight to the collection
+	 * @param flight - new flight to record to be added
+	 */
+	public void addFlight(Flight flight){
+		flights.add(flight);
+	}
+	
+	
+	
+	
+}

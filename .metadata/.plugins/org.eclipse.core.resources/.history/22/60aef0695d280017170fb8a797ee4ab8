@@ -1,0 +1,8 @@
+package com.reservoir.api.reservoir;
+
+
+
+@org.springframework.web.bind.annotation.RestController
+public class ReservoirController {
+
+}

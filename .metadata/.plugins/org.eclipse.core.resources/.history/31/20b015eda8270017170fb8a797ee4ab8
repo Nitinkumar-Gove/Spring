@@ -1,0 +1,30 @@
+package com.reservationsystem.api.flight;
+
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class FlightService {
+	
+	ArrayList<Flight> flights = new ArrayList<Flight>();
+	
+	
+	/**
+	 * function to get all the flights available
+	 * @return list of flights
+	 */
+	public List<Flight> getAllFlights(){ 
+	Date deptarture = new Date();
+	Date arrival = new Date();
+	
+	flights.add(new Flight("1",2000,"Pune","Mumbai",deptarture,arrival,50,"Daily flight"));
+	flights.add(new Flight("1",2000,"Pune","Bangalore",deptarture,arrival,50,"Daily flight"));
+	flights.add(new Flight("1",2000,"Pune","Goa",deptarture,arrival,50,"Daily flight"));
+	
+	return flights;
+	
+	}
+}

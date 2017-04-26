@@ -1,0 +1,13 @@
+/**
+ * @author Nitinkumar Gove
+ */
+package cmpe275.reservationsystem.api;
+
+public class FlightReservationAPIApp {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

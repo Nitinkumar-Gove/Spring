@@ -1,0 +1,5 @@
+package com.reservationsystem.api.flight;
+
+public class Flight {
+
+}

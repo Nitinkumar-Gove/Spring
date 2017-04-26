@@ -1,0 +1,19 @@
+package com.reservationsystem.api.flight;
+
+import java.util.List;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class FlightController {
+	
+	@Autowired
+	private FlightService fs;
+	
+	@RequestMapping("/flights")
+	public List<Flight> getFlights(){
+		return fs.getAllFlights();
+	}
+		
+}

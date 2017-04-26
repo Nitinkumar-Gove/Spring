@@ -1,0 +1,17 @@
+package com.reservoir.api.reservoir;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Date;
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class ReservoirService {
+	
+	List<Reservoir> all_reservoirs = new ArrayList<Reservoir>(Arrays.asList(new Reservoir("1", "Trinity Lake",5000, 50,30),
+			new Reservoir("2", "Lake Shasta",4000, 50,50),
+			new Reservoir("3", "Lake Oroville",3000, 50,20)));
+
+}
